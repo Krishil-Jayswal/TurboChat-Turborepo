@@ -1,5 +1,5 @@
 {
-  "name": "TurboChat",
+  "name": "turbochat",
   "private": true,
   "scripts": {
     "build": "turbo run build",
