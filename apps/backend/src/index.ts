@@ -1,16 +1,34 @@
 import express from "express";
+import { corsOptions, PORT } from "./config/constants.js";
+import { logger } from "@repo/logger";
+import { connectDB } from "@repo/db/config";
+import V1Router from "./routes/v1/index.js";
+import cors from "cors";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
+app.use(cors(corsOptions));
+
+app.use(cookieParser());
+
+app.use(express.json());
+
+app.use(logger.request());
+
+app.use("/api/v1", V1Router);
+
 app.get("/health", (req, res) => {
-  console.log(req.headers.origin);
   res.status(200).json({ message: "Server is running" });
 });
 
-app.listen(8080, (err) => {
+app.listen(PORT, async (err) => {
   if (err) {
-    console.error("Error starting server: ", err);
+    logger.error(`Error in starting server: ${err.message}.`);
     process.exit(1);
   }
-  console.log("Server started at http://localhost:8080/");
+
+  await connectDB();
+
+  logger.info(`Server started at port ${PORT}`);
 });

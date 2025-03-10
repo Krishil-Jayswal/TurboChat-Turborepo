@@ -1,0 +1,19 @@
+{
+  "name": "@repo/logger",
+  "version": "1.0.0",
+  "description": "A custom logger for logging messages in console.",
+  "license": "ISC",
+  "author": "Krishil",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.9.9"
+  }
+}
