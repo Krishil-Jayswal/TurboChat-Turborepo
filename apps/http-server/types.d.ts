@@ -7,12 +7,6 @@ declare global {
       NODE_ENV?: string;
     }
   }
-
-  namespace Express {
-    interface Request {
-      user?: string;
-    }
-  }
 }
 
 export {};

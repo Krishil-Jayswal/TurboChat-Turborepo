@@ -4,7 +4,6 @@ const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      default: null,
     },
     username: {
       type: String,
@@ -22,7 +21,6 @@ const userSchema = new mongoose.Schema(
     },
     profile_pic: {
       type: String,
-      default: null,
     },
     gender: {
       type: String,
@@ -30,7 +28,6 @@ const userSchema = new mongoose.Schema(
     },
     about: {
       type: String,
-      default: null,
     },
     profileSetup: {
       type: Boolean,
