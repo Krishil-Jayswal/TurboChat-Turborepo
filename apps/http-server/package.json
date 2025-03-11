@@ -1,11 +1,11 @@
 {
-  "name": "turbochat-backend",
+  "name": "http-server",
   "version": "1.0.0",
-  "description": "Backend application for TurboChat.",
+  "description": "API server for TurboChat.",
   "license": "ISC",
   "author": "Krishil",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon",
     "start": "node dist/index.js",

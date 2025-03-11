@@ -1,15 +1,23 @@
 {
   "name": "@repo/db",
   "version": "1.0.0",
-  "description": "A module for database models and configration functions.",
-  "main": "index.js",
-  "keywords": [],
-  "author": "Krishil",
+  "description": "A module for database models and connection configration.",
   "license": "ISC",
+  "author": "Krishil",
   "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc --watch --preserveWatchOutput"
+  },
   "exports": {
-    "./models": "./src/models/index.ts",
-    "./config": "./src/config/index.ts"
+    "./models": {
+      "types": "./src/models/index.ts",
+      "default": "./dist/models/index.js"
+    },
+    "./config": {
+      "types": "./src/config/index.ts",
+      "default": "./dist/config/index.js"
+    }
   },
   "dependencies": {
     "@repo/logger": "*",
