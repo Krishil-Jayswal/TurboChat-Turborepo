@@ -1,0 +1,33 @@
+{
+    "name": "@repo/crypto",
+    "version": "1.0.0",
+    "description": "A module for cryptographic functionality.",
+    "license": "ISC",
+    "author": "Krishil",
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "tsc --watch --preserveWatchOutput",
+        "build": "tsc -b"
+    },
+    "exports": {
+        "./jwt": {
+            "types": "./src/jwt/index.ts",
+            "default": "./dist/jwt/index.js"
+        },
+        "./bcrypt": {
+            "types": "./src/bcrypt/index.ts",
+            "default": "./dist/bcrypt/index.js"
+        }
+    },
+    "dependencies": {
+        "bcryptjs": "^3.0.2",
+        "dotenv": "^16.4.7",
+        "jsonwebtoken": "^9.0.2"
+    },
+    "devDependencies": {
+        "@types/jsonwebtoken": "^9.0.9",
+        "@repo/typescript-config": "*",
+        "@repo/logger": "*"
+    }
+}

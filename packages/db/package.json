@@ -1,0 +1,28 @@
+{
+  "name": "@repo/db",
+  "version": "1.0.0",
+  "description": "A module for database models and connection configration.",
+  "license": "ISC",
+  "author": "Krishil",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc --watch --preserveWatchOutput"
+  },
+  "exports": {
+    "./models": {
+      "types": "./src/models/index.ts",
+      "default": "./dist/models/index.js"
+    },
+    "./config": {
+      "types": "./src/config/index.ts",
+      "default": "./dist/config/index.js"
+    }
+  },
+  "dependencies": {
+    "@repo/logger": "*",
+    "@repo/typescript-config": "*",
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.12.1"
+  }
+}

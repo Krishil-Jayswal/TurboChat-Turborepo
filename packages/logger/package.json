@@ -1,0 +1,26 @@
+{
+  "name": "@repo/logger",
+  "version": "1.0.0",
+  "description": "A custom logger for logging messages in console.",
+  "license": "ISC",
+  "author": "Krishil",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch --preserveWatchOutput",
+    "build": "tsc -b"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.9.9"
+  }
+}
